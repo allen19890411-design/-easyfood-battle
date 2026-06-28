@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasyFood 美食大作戰</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-decoration deco-1">🍕</div>
+  <div class="bg-decoration deco-2">🍔</div>
+  <div class="bg-decoration deco-3">🍩</div>
+
+  <main class="app">
+    <section id="homePage" class="page home-page">
+      <div class="brand">🍔 EasyFood</div>
+      <h1>美食大作戰</h1>
+      <p class="subtitle">接住美食、閃避炸彈，挑戰最高分！</p>
+
+      <div class="menu-card">
+        <button id="startBtn" class="primary-btn">開始遊戲</button>
+        <button id="ruleBtn" class="secondary-btn">遊戲說明</button>
+        <button id="rankBtn" class="secondary-btn">最高紀錄</button>
+      </div>
+    </section>
+
+    <section id="rulePage" class="page hidden">
+      <h2>遊戲說明</h2>
+      <div class="info-card">
+        <p>🛵 控制外送員左右移動。</p>
+        <p>🍕 接住美食：+10 分。</p>
+        <p>⭐ 接住星星：短時間雙倍分數。</p>
+        <p>⏰ 接住時鐘：增加 5 秒。</p>
+        <p>💣 碰到炸彈：扣 1 條生命。</p>
+        <p>生命歸零或時間結束，遊戲就會結束。</p>
+      </div>
+      <button class="secondary-btn backHomeBtn">返回首頁</button>
+    </section>
+
+    <section id="rankPage" class="page hidden">
+      <h2>最高紀錄</h2>
+      <div class="score-board">
+        <div class="best-score" id="rankBestScore">0</div>
+        <p>目前最高分</p>
+      </div>
+      <button class="secondary-btn backHomeBtn">返回首頁</button>
+    </section>
+
+    <section id="gamePage" class="page game-page hidden">
+      <header class="hud">
+        <div>分數 <span id="score">0</span></div>
+        <div>時間 <span id="time">60</span></div>
+        <div>生命 <span id="life">❤️❤️❤️</span></div>
+      </header>
+
+      <div id="gameArea" class="game-area">
+        <div id="player" class="player">🛵</div>
+        <div id="comboText" class="combo-text hidden">DOUBLE!</div>
+      </div>
+
+      <div class="controls">
+        <button id="leftBtn">◀</button>
+        <button id="pauseBtn">暫停</button>
+        <button id="rightBtn">▶</button>
+      </div>
+    </section>
+
+    <section id="endPage" class="page hidden">
+      <h2>遊戲結束</h2>
+      <p>你的分數</p>
+      <div id="finalScore" class="final-score">0</div>
+      <div id="grade" class="grade">A</div>
+      <p id="endMessage" class="subtitle"></p>
+      <button id="restartBtn" class="primary-btn">再玩一次</button>
+      <button class="secondary-btn backHomeBtn">返回首頁</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
